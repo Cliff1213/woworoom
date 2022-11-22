@@ -7,7 +7,7 @@ current: index
 
 <!-- 橫幅 -->
 <section class="banner mt-8 mb-15">
-  <div class="container">
+  <div class="container-lg px-0 px-lg-3">
     <div class="banner-img d-flex align-items-end p-12">
       <h2 class="banner-title text-light">窩窩家居<br>跟您一起品味生活</h2>
     </div>
@@ -20,16 +20,16 @@ current: index
     <h3 class="advantage-title fs-2 mb-7">床墊優勢</h3>
 
     <div class="row">
-      <div class="col-4">
-        <img src="./assets/images/advantage_01.png" alt="img_advantage">
+      <div class="col-md-4 mb-6 mb-md-0">
+        <img src="./assets/images/advantage_01.png" class="advantage-img w-100" alt="img_advantage">
         <h4 class="fs-4 mt-2">原木料環保</h4>
       </div>
-      <div class="col-4">
-        <img src="./assets/images/advantage_02.png" alt="img_advantage">
+      <div class="col-md-4 mb-6 mb-md-0">
+        <img src="./assets/images/advantage_02.png" class="advantage-img w-100" alt="img_advantage">
         <h4 class="fs-4 mt-2">好收納</h4>
       </div>
-      <div class="col-4">
-        <img src="./assets/images/advantage_03.png" alt="img_advantage">
+      <div class="col-md-4 mb-6 mb-md-0">
+        <img src="./assets/images/advantage_03.png" class="advantage-img w-100" alt="img_advantage">
         <h4 class="fs-4 mt-2">好組裝</h4>
       </div>
     </div>
@@ -42,7 +42,7 @@ current: index
 
   <div class="container">
     <div class="row">
-      <div class="col-7 mx-auto">
+      <div class="col-md-10 col-lg-7 mx-auto">
         <table class="table">
           <thead>
             <tr class="text-center">
@@ -117,7 +117,7 @@ current: index
 
   <div class="container">
     <ul class="ship-list row justify-content-center">
-      <li class="ship-item col-2 text-center">
+      <li class="ship-item col-md-5 col-lg-2 mb-6 mb-lg-0 text-center">
         <span class="ship-icon material-icons display-5 border border-3 border-black rounded-circle p-8 d-flex justify-content-center align-items-center mx-auto position-relative">
           shopping_cart
         </span>
@@ -125,7 +125,7 @@ current: index
         <p>選購商品</p>
       </li>
 
-      <li class="ship-item col-2 text-center">
+      <li class="ship-item col-md-5 col-lg-2 mb-6 mb-lg-0 text-center">
         <span class="ship-icon material-icons display-5 border border-3 border-black rounded-circle p-8 d-flex justify-content-center align-items-center mx-auto position-relative">
           format_list_bulleted
         </span>
@@ -133,7 +133,7 @@ current: index
         <p>填寫預定資料</p>
       </li>
 
-      <li class="ship-item col-2 text-center">
+      <li class="ship-item col-md-5 col-lg-2 mb-6 mb-md-0 text-center">
         <span class="ship-icon material-icons display-5 border border-3 border-black rounded-circle p-8 d-flex justify-content-center align-items-center mx-auto position-relative">
           done
         </span>
@@ -141,7 +141,7 @@ current: index
         <p>預定成功</p>
       </li>
 
-      <li class="ship-item col-2 text-center">
+      <li class="ship-item col-md-5 col-lg-2 text-center">
         <span class="ship-icon material-icons display-5 border border-3 border-black rounded-circle p-8 d-flex justify-content-center align-items-center mx-auto position-relative">
           local_post_office
         </span>
@@ -149,5 +149,236 @@ current: index
         <p>Email 付款資訊</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- 產品列表 -->
+<section class="product mb-10">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <form action="#">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>全部</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <ul class="row mt-8 mb-0">
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_01.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Antony 雙人床架／雙人加大</h4>
+          <p class="text-decoration-line-through">NT$18,000</p>
+          <p class="fs-2">NT$12,000</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_02.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Louvre 雙人床架／雙人加大</h4>
+          <p class="text-decoration-line-through">NT$22,000</p>
+          <p class="fs-2">NT$18,000</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_03.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Charles 雙人床架</h4>
+          <p class="text-decoration-line-through">NT$17,000</p>
+          <p class="fs-2">NT$15,000</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_04.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Jodan 雙人床架／雙人加大</h4>
+          <p class="text-decoration-line-through">NT$12,000</p>
+          <p class="fs-2">NT$9,000</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_05.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Antony 遮光窗簾</h4>
+          <p class="text-decoration-line-through">NT$3,980</p>
+          <p class="fs-2">NT$1,200</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_06.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Louvre 單人床架</h4>
+          <p class="text-decoration-line-through">NT$5,780</p>
+          <p class="fs-2">NT$3,780</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_07.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Charles 系列儲物組合</h4>
+          <p class="text-decoration-line-through">NT$1,200</p>
+          <p class="fs-2">NT$12,000</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+
+      <li class="col-md-6 col-lg-3 mb-7">
+        <div class="product-card position-relative">
+          <div class="product-img">
+            <img src="./assets/images/product_08.png" class="w-100" alt="img_product">
+          </div>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
+          <h4 class="mt-2">Antony 床邊桌</h4>
+          <p class="text-decoration-line-through">NT$3,200</p>
+          <p class="fs-2">NT$1,890</p>
+          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 我的購物車 -->
+<section class="cart bg-light pt-12 pb-15">
+  <h3 class="text-center fs-2 mb-8">我的購物車</h3>
+
+  <div class="container overflow-auto">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+        <table class="table table-borderless fs-4">
+          <thead>
+            <tr>
+              <th scope="col">品項</th>
+              <th scope="col">單價</th>
+              <th scope="col">數量</th>
+              <th scope="col">金額</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+
+          <tbody class="align-middle">
+            <tr class="border-bottom">
+              <th scope="row">
+                <div class="d-flex align-items-center">
+                  <img src="./assets/images/cart_01.png" class="me-4 d-none d-lg-block" alt="img_cart">
+                  <p>Antony 雙人床架／雙人加大</p>
+                </div>
+              </th>
+              <td>NT$12,000</td>
+              <td>1</td>
+              <td>NT$12,000</td>
+              <td class="text-center">
+                <a href="#" class="material-icons">clear</a>
+              </td>
+            </tr>
+            
+            <tr class="border-bottom">
+              <th scope="row">
+                <div class="d-flex align-items-center">
+                  <img src="./assets/images/cart_01.png" class="me-4 d-none d-lg-block" alt="img_cart">
+                  <p>Antony 雙人床架／雙人加大</p>
+                </div>
+              </th>
+              <td>NT$12,000</td>
+              <td>1</td>
+              <td>NT$12,000</td>
+              <td class="text-center">
+                <a href="#" class="material-icons">clear</a>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot class="align-middle">
+            <tr>
+              <td colspan="3">
+                <a href="#" class="btn btn-outline-dark">刪除所有品項</a>
+              </td>
+              <td class="border-0">總金額</td>
+              <td class="text-center border-0">NT$13,980</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 填寫預訂資料 -->
+<section class="reserve mt-15 mb-20">
+  <h3 class="text-center fs-2 mb-8">填寫預訂資料</h3>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xl-4 mx-auto">
+        <form action="#">
+          <ul>
+            <li class="mb-5">
+              <label for="reserveName" class="form-label">姓名</label>
+              <input type="text" class="form-control" placeholder="請輸入姓名" id="reserveName">
+            </li>
+            <li class="mb-5">
+              <label for="reservePhone" class="form-label">電話</label>
+              <input type="text" class="form-control" placeholder="請輸入電話" id="reservePhone">
+            </li>
+            <li class="mb-5">
+              <label for="reserveEmail" class="form-label">Email</label>
+              <input type="text" class="form-control" placeholder="請輸入 Email" id="reserveEmail">
+            </li>
+            <li class="mb-5">
+              <label for="reserveAddress" class="form-label">寄送地址</label>
+              <input type="text" class="form-control" placeholder="請輸入寄送地址" id="reserveAddress">
+            </li>
+            <li class="mb-12">
+              <label for="reservePayment" class="form-label">交易方式</label>
+              <select name="reservePayment" class="form-select" aria-label="Default select example" id="reservePayment">
+                <option selected>ATM</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </li>
+        </ul>
+        <input type="submit" class="reserve-btn btn btn-dark fs-4 py-3 px-15 d-block mx-auto" value="送出預訂資料">
+        </form>
+      </div>
+    </div>
   </div>
 </section>

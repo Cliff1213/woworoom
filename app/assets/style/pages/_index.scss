@@ -7,6 +7,13 @@
   }
 }
 
+// advantage
+.advantage {
+  &-img {
+    object-fit: cover;
+  }
+}
+
 // ship
 .ship {
   &-item:nth-child(-n+3) &-icon {
@@ -15,16 +22,46 @@
       position: absolute;
       width: 40px;
       height: 40px;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       left: 100%;
       bottom: 50%;
-      transform: translate(100%, 20%);
+      @media(min-width: 996px) {
+        display: flex;
+        transform: translate(20%, 20%);
+      }
+      @media(min-width: 1200px) {
+        transform: translate(60%, 20%);
+      }
+      @media(min-width: 1400px) {
+        transform: translate(100%, 20%);
+      }
     }
   }
   &-icon {
     width: 115px;
     height: 115px;
+  }
+}
+
+// cart
+.cart {
+  th, td, p {
+    white-space: nowrap;
+  }
+}
+
+// product
+.product {
+  .card-decoration {
+    transform: translate(6px, 8px);
+  }
+}
+
+// reserve
+.reserve {
+  &-btn {
+    max-width: max-content !important;
   }
 }
