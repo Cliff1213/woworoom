@@ -6,7 +6,7 @@ current: index
 ---
 
 <!-- 橫幅 -->
-<section class="banner mt-8 mb-15">
+<section class="banner mt-8">
   <div class="container-lg px-0 px-lg-3">
     <div class="banner-img d-flex align-items-end p-12">
       <h2 class="banner-title text-light">窩窩家居<br>跟您一起品味生活</h2>
@@ -15,7 +15,7 @@ current: index
 </section>
 
 <!-- 床墊優勢 -->
-<section class="advantage">
+<section class="advantage pt-15" id="advantage">
   <div class="container text-center">
     <h3 class="advantage-title fs-2 mb-7">床墊優勢</h3>
 
@@ -104,15 +104,212 @@ current: index
 </section>
 
 <!-- 好評推薦 -->
-<section class="recommend bg-primary py-12">
+<section class="recommend bg-primary py-12" id="recommend">
   <h3 class="text-center fs-2 mb-7 text-light">好評推薦</h3>
+  
   <div class="container">
+    <div class="swiper-wrap position-relative">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="recommend-card mb-5 recommend-translate">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_01.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_01.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>王六角</p>
+                      <p class="fs-7 text-fantasy">Jodan 雙人床架</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">CP值很高。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="recommend-card">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_02.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_02.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>小杰</p>
+                      <p class="fs-7 text-fantasy">Louvre 雙人床架</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">非常舒適，有需要會再回購</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide">
+            <div class="recommend-card mb-5 recommend-translate">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_03.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_03.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>Leaf</p>
+                      <p class="fs-7 text-fantasy">Antony 雙人床架</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">很喜歡～還有送三年保固～</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="recommend-card">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_04.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_04.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>江八角</p>
+                      <p class="fs-7 text-fantasy">Charles 雙人床架</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">品質不錯～</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="recommend-card mb-5 recommend-translate">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_05.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_05.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>美濃鄧子琪</p>
+                      <p class="fs-7 text-fantasy">Charles 系列儲物組合</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">廚房必備美用品！</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="recommend-card">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_06.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_06.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>juni讚神</p>
+                      <p class="fs-7 text-fantasy">Antony 床邊桌</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">讚ㄉ！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="recommend-card mb-5 recommend-translate">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_07.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_07.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>史傑克</p>
+                      <p class="fs-7 text-fantasy">Antony 雙人床架</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">物超所值</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="recommend-card">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_08.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_08.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>真新鎮的小智障</p>
+                      <p class="fs-7 text-fantasy">Antony 雙人床架</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">一躺秒睡。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="recommend-card mb-5 recommend-translate">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_09.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_09.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>哈登</p>
+                      <p class="fs-7 text-fantasy">Charles 系列儲物組合</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">買到賺到！</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="recommend-card">
+              <div class="d-flex h-100 bg-light">
+                <div class="recommend-img">
+                  <img src="./assets/images/recommend_10.png" width="95" height="96" class="img_recommend">
+                </div>
+                <div class="h-100 p-3 text-start border-0 w-100 h-100">
+                  <div class="d-flex">
+                    <img src="./assets/images/recommend_ava_10.png" width="40px" height="40px" alt="img_avatar">
+                    <div class="ms-2">
+                      <p>勇者魯德拉</p>
+                      <p class="fs-7 text-fantasy">Antony 雙人床架</p>
+                    </div>
+                  </div>
+                  <p class="mt-1">值得讚許</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
 
 <!-- 運送方式 -->
-<section class="ship mt-8 mb-15">
+<section class="ship pt-8 mb-15" id="ship">
   <h3 class="text-center fs-2 mb-8">運送方式</h3>
 
   <div class="container">
@@ -342,7 +539,7 @@ current: index
 </section>
 
 <!-- 填寫預訂資料 -->
-<section class="reserve mt-15 mb-20">
+<section class="reserve pt-15 mb-20" id="reserve">
   <h3 class="text-center fs-2 mb-8">填寫預訂資料</h3>
 
   <div class="container">

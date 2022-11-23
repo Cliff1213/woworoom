@@ -1,7 +1,12 @@
+// font
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
-
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+// swiper
+@import url('https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css');
+@import './vender/swiper';
+
+// bootstrap
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
@@ -9,4 +14,5 @@
 // base
 @import "./base/base";
 
-@import './pages/index.scss';
+// pages
+@import './pages/index';
