@@ -355,18 +355,18 @@ current: index
     <div class="row">
       <div class="col-md-6 col-lg-3">
         <form action="#">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>全部</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select class="form-select" aria-label="Default select example" onchange="filterProducts(event)">
+            <option selected value="全部">全部</option>
+            <option value="窗簾">窗簾</option>
+            <option value="床架">床架</option>
+            <option value="收納">收納</option>
           </select>
         </form>
       </div>
     </div>
 
-    <ul class="row mt-8 mb-0">
-      <li class="col-md-6 col-lg-3 mb-7">
+    <ul class="row mt-8 mb-0" id="productList">
+      <!-- <li class="col-md-6 col-lg-3 mb-7">
         <div class="product-card position-relative">
           <div class="product-img">
             <img src="./assets/images/product_01.png" class="w-100" alt="img_product">
@@ -377,98 +377,7 @@ current: index
           <p class="fs-2">NT$12,000</p>
           <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
         </div>
-      </li>
-
-      <li class="col-md-6 col-lg-3 mb-7">
-        <div class="product-card position-relative">
-          <div class="product-img">
-            <img src="./assets/images/product_02.png" class="w-100" alt="img_product">
-          </div>
-          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
-          <h4 class="mt-2">Louvre 雙人床架／雙人加大</h4>
-          <p class="text-decoration-line-through">NT$22,000</p>
-          <p class="fs-2">NT$18,000</p>
-          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
-        </div>
-      </li>
-
-      <li class="col-md-6 col-lg-3 mb-7">
-        <div class="product-card position-relative">
-          <div class="product-img">
-            <img src="./assets/images/product_03.png" class="w-100" alt="img_product">
-          </div>
-          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
-          <h4 class="mt-2">Charles 雙人床架</h4>
-          <p class="text-decoration-line-through">NT$17,000</p>
-          <p class="fs-2">NT$15,000</p>
-          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
-        </div>
-      </li>
-
-      <li class="col-md-6 col-lg-3 mb-7">
-        <div class="product-card position-relative">
-          <div class="product-img">
-            <img src="./assets/images/product_04.png" class="w-100" alt="img_product">
-          </div>
-          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
-          <h4 class="mt-2">Jodan 雙人床架／雙人加大</h4>
-          <p class="text-decoration-line-through">NT$12,000</p>
-          <p class="fs-2">NT$9,000</p>
-          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
-        </div>
-      </li>
-
-      <li class="col-md-6 col-lg-3 mb-7">
-        <div class="product-card position-relative">
-          <div class="product-img">
-            <img src="./assets/images/product_05.png" class="w-100" alt="img_product">
-          </div>
-          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
-          <h4 class="mt-2">Antony 遮光窗簾</h4>
-          <p class="text-decoration-line-through">NT$3,980</p>
-          <p class="fs-2">NT$1,200</p>
-          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
-        </div>
-      </li>
-
-      <li class="col-md-6 col-lg-3 mb-7">
-        <div class="product-card position-relative">
-          <div class="product-img">
-            <img src="./assets/images/product_06.png" class="w-100" alt="img_product">
-          </div>
-          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
-          <h4 class="mt-2">Louvre 單人床架</h4>
-          <p class="text-decoration-line-through">NT$5,780</p>
-          <p class="fs-2">NT$3,780</p>
-          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
-        </div>
-      </li>
-
-      <li class="col-md-6 col-lg-3 mb-7">
-        <div class="product-card position-relative">
-          <div class="product-img">
-            <img src="./assets/images/product_07.png" class="w-100" alt="img_product">
-          </div>
-          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
-          <h4 class="mt-2">Charles 系列儲物組合</h4>
-          <p class="text-decoration-line-through">NT$1,200</p>
-          <p class="fs-2">NT$12,000</p>
-          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
-        </div>
-      </li>
-
-      <li class="col-md-6 col-lg-3 mb-7">
-        <div class="product-card position-relative">
-          <div class="product-img">
-            <img src="./assets/images/product_08.png" class="w-100" alt="img_product">
-          </div>
-          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center">加入購物車</a>
-          <h4 class="mt-2">Antony 床邊桌</h4>
-          <p class="text-decoration-line-through">NT$3,200</p>
-          <p class="fs-2">NT$1,890</p>
-          <p class="card-decoration position-absolute top-0 end-0 text-light bg-dark py-2 px-6">新品</p>
-        </div>
-      </li>
+      </li> -->
     </ul>
   </div>
 </section>
@@ -491,8 +400,8 @@ current: index
             </tr>
           </thead>
 
-          <tbody class="align-middle">
-            <tr class="border-bottom">
+          <tbody class="align-middle" id="cartDataList">
+            <!-- <tr class="border-bottom">
               <th scope="row">
                 <div class="d-flex align-items-center">
                   <img src="./assets/images/cart_01.png" class="me-4 d-none d-lg-block" alt="img_cart">
@@ -505,31 +414,16 @@ current: index
               <td class="text-center">
                 <a href="#" class="material-icons">clear</a>
               </td>
-            </tr>
-            
-            <tr class="border-bottom">
-              <th scope="row">
-                <div class="d-flex align-items-center">
-                  <img src="./assets/images/cart_01.png" class="me-4 d-none d-lg-block" alt="img_cart">
-                  <p>Antony 雙人床架／雙人加大</p>
-                </div>
-              </th>
-              <td>NT$12,000</td>
-              <td>1</td>
-              <td>NT$12,000</td>
-              <td class="text-center">
-                <a href="#" class="material-icons">clear</a>
-              </td>
-            </tr>
+            </tr>-->
           </tbody>
 
           <tfoot class="align-middle">
             <tr>
               <td colspan="3">
-                <a href="#" class="btn btn-outline-dark">刪除所有品項</a>
+                <a class="btn btn-outline-dark" id="deleteAllBtn" onclick="deleteAllProducts()">刪除所有品項</a>
               </td>
               <td class="border-0">總金額</td>
-              <td class="text-center border-0">NT$13,980</td>
+              <td class="text-center border-0" id="totalPrice">NT$13,980</td>
             </tr>
           </tfoot>
         </table>
@@ -539,41 +433,44 @@ current: index
 </section>
 
 <!-- 填寫預訂資料 -->
-<section class="reserve pt-15 mb-20" id="reserve">
+<section class="order pt-15 mb-20" id="order">
   <h3 class="text-center fs-2 mb-8">填寫預訂資料</h3>
 
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-xl-4 mx-auto">
-        <form action="#">
+        <form action="#" id="orderForm">
           <ul>
             <li class="mb-5">
-              <label for="reserveName" class="form-label">姓名</label>
-              <input type="text" class="form-control" placeholder="請輸入姓名" id="reserveName">
+              <label for="orderName" class="form-label">姓名</label>
+              <input type="text" class="form-control" placeholder="請輸入姓名" name="orderName" id="orderName" onkeyup="formValidation()">
+              <p class="order-message"></p>
             </li>
             <li class="mb-5">
-              <label for="reservePhone" class="form-label">電話</label>
-              <input type="text" class="form-control" placeholder="請輸入電話" id="reservePhone">
+              <label for="orderTel" class="form-label">電話（市話或手機）</label>
+              <input type="text" class="form-control" placeholder="請輸入電話" name="orderTel" id="orderTel" onkeyup="formValidation()">
+              <p class="order-message"></p>
             </li>
             <li class="mb-5">
-              <label for="reserveEmail" class="form-label">Email</label>
-              <input type="text" class="form-control" placeholder="請輸入 Email" id="reserveEmail">
+              <label for="orderEmail" class="form-label">Email</label>
+              <input type="text" class="form-control" placeholder="請輸入 Email" name="orderEmail" id="orderEmail" onkeyup="formValidation()">
+              <p class="order-message"></p>
             </li>
             <li class="mb-5">
-              <label for="reserveAddress" class="form-label">寄送地址</label>
-              <input type="text" class="form-control" placeholder="請輸入寄送地址" id="reserveAddress">
+              <label for="orderAddress" class="form-label">寄送地址</label>
+              <input type="text" class="form-control" placeholder="請輸入寄送地址" name="orderAddress" id="orderAddress" onkeyup="formValidation()">
+              <p class="order-message"></p>
             </li>
             <li class="mb-12">
-              <label for="reservePayment" class="form-label">交易方式</label>
-              <select name="reservePayment" class="form-select" aria-label="Default select example" id="reservePayment">
+              <label for="orderPayment" class="form-label">交易方式</label>
+              <select class="form-select" aria-label="Default select example" name="orderPayment" id="orderPayment">
                 <option selected>ATM</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="信用卡">信用卡</option>
+                <option value="超商">超商</option>
               </select>
             </li>
         </ul>
-        <input type="submit" class="reserve-btn btn btn-dark fs-4 py-3 px-15 d-block mx-auto" value="送出預訂資料">
+        <input type="submit" class="order-btn btn btn-dark fs-4 py-3 px-15 d-block mx-auto" value="送出預訂資料" onclick="sendOrder(event)">
         </form>
       </div>
     </div>

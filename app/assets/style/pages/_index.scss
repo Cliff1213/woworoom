@@ -72,9 +72,12 @@
   }
 }
 
-// reserve
-.reserve {
+// order
+.order {
   &-btn {
     max-width: max-content !important;
+  }
+  &-message {
+    color: #E0144C;
   }
 }
