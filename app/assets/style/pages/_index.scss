@@ -67,6 +67,14 @@
 
 // product
 .product {
+  &-btn {
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      background-color: darken($indigo, 20%) !important;
+      transition: .3s;
+    }
+  }
   .card-decoration {
     transform: translate(6px, 8px);
   }

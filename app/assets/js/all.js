@@ -15,7 +15,6 @@ const getData = () => {
     }
   })
     .then(res => {
-      console.log(res.data.products)
       render(res.data.products)
     })
     .catch(err => console.log(err.message))
@@ -40,7 +39,7 @@ const render = (data) => {
           <div class="product-img">
             <img src="${imgUrl}" class="w-100" alt="img_product">
           </div>
-          <a class="product-btn text-light bg-dark d-block py-3 text-center" data-id="${id}" onclick="addCart(event)">加入購物車</a>
+          <a href="#" class="product-btn text-light bg-dark d-block py-3 text-center" data-id="${id}" onclick="addCart(event)">加入購物車</a>
           <h4 class="mt-2">${title}</h4>
           <p class="text-decoration-line-through">${originPrice}</p>
           <p class="fs-2">${price}</p>
@@ -69,8 +68,7 @@ const getCartsList = () => {
     }
   })
   .then(res => {
-    console.log(res.data.carts)
-    cartProducts = res.data.carts; // 用於 addCart
+    cartProducts = res.data.carts; // 避免後續重新請求
     renderCart(res.data.carts)
   })
   .catch(err => console.log(err.message))
@@ -80,6 +78,8 @@ getCartsList()
 
 // 加入購物車
 const addCart = (event) => {
+  event.preventDefault();
+
   const addProductId = event.target.dataset.id;
 
   let accumulateQuantity = 1;
@@ -104,7 +104,6 @@ const addCart = (event) => {
     .then(res => {
       alert('成功加入購物車')
       renderCart(res.data.carts)
-      getCartsList() // 配合 cartProducts 重新賦值
     })
     .catch(err => console.log(err.message))
 }
@@ -137,7 +136,7 @@ const renderCart = (data) => {
       <td>${quantity}</td>
       <td>${accumulatePrice}</td>
       <td class="text-center">
-        <a class="material-icons" data-id="${id}" onclick="deleteProduct(event)">clear</a>
+        <a href="#" class="material-icons" data-id="${id}" onclick="deleteProduct(event)">clear</a>
       </td>
     </tr>`
   })
@@ -146,7 +145,10 @@ const renderCart = (data) => {
   const priceGroup = data.map(i => i.product.price);
   const totalPrice = priceGroup.reduce((acc, cur) => acc + cur, 0).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
-  document.querySelector('#totalPrice').textContent = `$NT${totalPrice}`;
+  document.querySelector('#totalPrice').textContent = `$NT ${totalPrice}`;
+
+  // console.log(data)
+  cartProducts = data;
 }
 
 // 刪除購物車所有品項
@@ -160,13 +162,15 @@ const deleteAllProducts = () => {
   })
   .then(res => {
     alert(res.data.message)
-    getCartsList()
+    renderCart(res.data.carts)
   })
   .catch(err => alert(err.response.data.message))
 }
 
 // 刪除購物車指定品項
 const deleteProduct = (event) => {
+  event.preventDefault();
+
   const deleteProductId = event.target.dataset.id;
   console.log(deleteProductId)
   axios({
@@ -180,7 +184,7 @@ const deleteProduct = (event) => {
       alert('已成功刪除該品項')
       renderCart(res.data.carts)
     })
-    .catch(err => console.log(err.data.message))
+    .catch(err => console.log(err))
 }
 
 // 送出訂單
@@ -223,7 +227,7 @@ const sendOrder = (event) => {
   })
     .then(res => {
       alert('訂單已送出')
-      cartProducts = [] // 送出後清空購物車並再次渲染
+      cartProducts = [] // 送出訂單後清空購物車並再次渲染
       renderCart(cartProducts)
       orderForm.reset();
     })
