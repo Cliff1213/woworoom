@@ -1,0 +1,80 @@
+---
+title: WOWOROOM｜後台管理
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<!-- navbar -->
+<header class="bg-dark pb-10">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-9">
+    <div class="container-md">
+      <a class="navbar-brand fw-bold" href="./index.html">WOWOROOM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+          <li class="nav-item me-lg-12">
+            <a class="nav-link" aria-current="page" href="#">後台管理</a>
+          </li>
+          <li class="nav-item me-lg-12">
+            <a class="nav-link" href="#">管理員登入</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- 全品項營收比例 -->
+<section class="manage mt-15 mb-20">
+  <h2 class="fs-2 text-center mb-20">全品項營收比重</h2>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12">
+
+        <!-- chart -->
+        <div class="mb-15" id="chart"></div>
+    
+        <div class="d-flex justify-content-end mb-3">
+          <a href="#" class="btn btn-outline-dark fs-4 pt-3 pb-2 px-3" onclick="deleteAllOrders(event)">清除全部訂單</a>
+        </div>
+    
+        <!-- table -->
+        <table class="manage-table table table-striped table-bordered">
+          <thead class="text-center">
+            <tr>
+              <th scope="col">訂單編號</th>
+              <th scope="col">聯絡人</th>
+              <th scope="col">聯絡地址</th>
+              <th scope="col">電子郵件</th>
+              <th scope="col">訂單品項</th>
+              <th scope="col">訂單日期</th>
+              <th scope="col">訂單狀態</th>
+              <th scope="col">操作</th>
+            </tr>
+          </thead>
+          <tbody class="align-middle text-center" id="manageList">
+            <!-- <tr>
+              <td>10088377474</td>
+              <td>小杰<br>0912345678</td>
+              <td>高雄市前鎮區六合路183巷66號</td>
+              <td>cccexample@gmail.com</td>
+              <td>Louvre 雙人床架</td>
+              <td>2021/03/08</td>
+              <td class="text-center">
+                <a href="#" class="text-decoration-underline text-primary">未處理</a>
+              </td>
+              <td class="text-center">
+                <a href="#" class="btn btn-danger">刪除</a>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
