@@ -106,8 +106,9 @@ var renderCart = function renderCart(data) {
     renderStr += "\n    <tr class=\"border-bottom\">\n      <th scope=\"row\">\n        <div class=\"d-flex align-items-center\">\n          <img src=\"".concat(imgUrl, "\" class=\"me-4 d-none d-lg-block\" alt=\"img_cart\" width=\"80px\" height=\"80px\">\n          <p>").concat(title, "</p>\n        </div>\n      </th>\n      <td>").concat(priceSwitch, "</td>\n      <td>").concat(quantity, "</td>\n      <td>").concat(accumulatePrice, "</td>\n      <td class=\"text-center\">\n        <a href=\"#\" class=\"material-icons\" data-id=\"").concat(id, "\" onclick=\"deleteProduct(event)\">clear</a>\n      </td>\n    </tr>");
   });
   cartDataList.innerHTML = renderStr;
+  console.log(data);
   var priceGroup = data.map(function (i) {
-    return i.product.price;
+    return i.product.price * i.quantity;
   });
   var totalPrice = priceGroup.reduce(function (acc, cur) {
     return acc + cur;
