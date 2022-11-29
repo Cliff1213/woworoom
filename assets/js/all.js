@@ -4,6 +4,7 @@ console.clear();
 var url = 'https://livejs-api.hexschool.io/api/livejs/v1';
 var path = 'cliff2022';
 var token = '5bBQ25vhH9fZiZP8Ykd3xHgoCZu2';
+var renderData;
 var cartProducts; // 所有產品資料取得
 
 var getData = function getData() {
@@ -13,6 +14,7 @@ var getData = function getData() {
       'Authorization': token
     }
   }).then(function (res) {
+    renderData = res.data.products;
     render(res.data.products);
   })["catch"](function (err) {
     return console.log(err.message);
