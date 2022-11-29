@@ -4,6 +4,7 @@ const url = 'https://livejs-api.hexschool.io/api/livejs/v1';
 const path = 'cliff2022';
 let token = '5bBQ25vhH9fZiZP8Ykd3xHgoCZu2';
 
+let renderData;
 let cartProducts;
 
 // 所有產品資料取得
@@ -15,6 +16,7 @@ const getData = () => {
     }
   })
     .then(res => {
+      renderData = res.data.products;
       render(res.data.products)
     })
     .catch(err => console.log(err.message))
