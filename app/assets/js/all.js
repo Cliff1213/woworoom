@@ -126,6 +126,7 @@ const renderCart = (data) => {
           quantity = i['quantity'],
           accumulatePrice = (price * quantity).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
+
     renderStr += `
     <tr class="border-bottom">
       <th scope="row">
@@ -144,7 +145,9 @@ const renderCart = (data) => {
   })
   cartDataList.innerHTML = renderStr;
 
-  const priceGroup = data.map(i => i.product.price);
+  console.log(data)
+  const priceGroup = data.map(i => i.product.price * i.quantity);
+  
   const totalPrice = priceGroup.reduce((acc, cur) => acc + cur, 0).toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 
   document.querySelector('#totalPrice').textContent = `$NT ${totalPrice}`;
